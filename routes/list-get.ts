@@ -9,11 +9,11 @@ module.exports = (app: Express) => {
         pageCount: 10,
         data: [
           {
-            id: faker.color.cmyk(),
-            email: faker.string.binary(),
-            name: faker.person.lastName,
-            type: faker.string.alpha,
-            date: faker.date.month
+            id: faker.string.uuid(),
+            email: faker.internet.email(),
+            name: faker.internet.userName(),
+            password: faker.internet.password(),
+            date: faker.date.birthdate()
           }
         ]
       }
