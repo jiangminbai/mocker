@@ -2,12 +2,12 @@ import { faker } from "@faker-js/faker";
 import { Express } from "express";
 
 module.exports = (app: Express) => {
-  app.get('/item/:id', function(req, res) {
+  app.get('/demo/:id', function(req, res) {
     console.log(req.params.id)
     res.json(
       {
         id: req.params.id,
-        message: 'get success'
+        message: 'get demo success'
       }
     )
   })

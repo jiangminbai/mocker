@@ -2,12 +2,10 @@ import { faker } from "@faker-js/faker";
 import { Express } from "express";
 
 module.exports = (app: Express) => {
-  app.get('/item/:id', function(req, res) {
-    console.log(req.params.id)
+  app.put('/tree', function(req, res) {
     res.json(
       {
-        id: req.params.id,
-        message: 'get success'
+        message: 'tree update success'
       }
     )
   })
