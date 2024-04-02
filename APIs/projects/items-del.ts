@@ -2,12 +2,11 @@ import { faker } from "@faker-js/faker";
 import { Express } from "express";
 
 module.exports = (app: Express) => {
-  app.get('/demo/:id', function(req, res) {
-    console.log(req.params.id)
+  app.delete('/items/:id', function(req, res) {
     res.json(
       {
         id: req.params.id,
-        message: 'get demo success'
+        message: 'deleted success'
       }
     )
   })
